@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Universal Task Schema",
+  "description": "Schema for defining tasks in the Universal AI Coding Agent workflow",
+  "type": "object",
+  "required": ["project", "description", "tasks"],
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "Project name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Project description"
+    },
+    "environment": {
+      "type": "object",
+      "description": "Environment configuration for the project",
+      "properties": {
+        "sdk": {
+          "type": "string",
+          "description": "Path to SDK or runtime"
+        },
+        "build_cmd": {
+          "type": "string",
+          "description": "Build command (e.g., npm run build, cargo build)"
+        },
+        "test_cmd": {
+          "type": "string",
+          "description": "Test command (e.g., npm test, pytest)"
+        },
+        "lint_cmd": {
+          "type": "string",
+          "description": "Linting command (e.g., eslint, ruff check)"
+        },
+        "install_cmd": {
+          "type": "string",
+          "description": "Dependency installation command"
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "category", "description", "steps", "passes"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Task ID (sequential)"
+          },
+          "title": {
+            "type": "string",
+            "description": "Task title"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["infrastructure", "feature", "ui", "business", "testing", "optimization"],
+            "description": "Task category for organization"
+          },
+          "description": {
+            "type": "string",
+            "description": "What this task accomplishes"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Specific implementation steps"
+          },
+          "test_commands": {
+            "type": "object",
+            "properties": {
+              "lint": {
+                "type": "string"
+              },
+              "test": {
+                "type": "string"
+              },
+              "build": {
+                "type": "string"
+              }
+            }
+          },
+          "passes": {
+            "type": "boolean",
+            "description": "Whether the task is completed",
+            "default": false
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "project": "react-todo-app",
+  "description": "A React app for managing todos with local storage persistence",
+  "environment": {
+    "sdk": "nodejs",
+    "install_cmd": "npm install",
+    "lint_cmd": "npm run lint",
+    "test_cmd": "npm test",
+    "build_cmd": "npm run build"
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Project Setup",
+      "category": "infrastructure",
+      "description": "Initialize React project with Vite",
+      "steps": [
+        "Create Vite + React + TypeScript project",
+        "Install dependencies",
+        "Configure ESLint and Prettier",
+        "Verify dev server runs"
+      ],
+      "passes": false
+    },
+    {
+      "id": 2,
+      "title": "Project Structure",
+      "category": "infrastructure",
+      "description": "Set up Clean Architecture folder structure",
+      "steps": [
+        "Create src/components/ directory",
+        "Create src/hooks/ directory",
+        "Create src/types/ directory",
+        "Create src/utils/ directory"
+      ],
+      "passes": false
+    },
+    {
+      "id": 3,
+      "title": "Todo Type Definition",
+      "category": "infrastructure",
+      "description": "Define TypeScript interfaces for todos",
+      "steps": [
+        "Create Todo interface with id, title, completed, createdAt",
+        "Create TodoInput type",
+        "Export types from index.ts"
+      ],
+      "passes": false
+    },
+    {
+      "id": 4,
+      "title": "Local Storage Hook",
+      "category": "feature",
+      "description": "Create custom hook for localStorage persistence",
+      "steps": [
+        "Create useLocalStorage hook",
+        "Handle JSON serialization",
+        "Add type safety",
+        "Test persistence"
+      ],
+      "passes": false
+    },
+    {
+      "id": 5,
+      "title": "Todo List Component",
+      "category": "ui",
+      "description": "Create main TodoList component",
+      "steps": [
+        "Create TodoList.tsx",
+        "Display todos with map",
+        "Handle empty state",
+        "Style with CSS modules"
+      ],
+      "passes": false
+    },
+    {
+      "id": 6,
+      "title": "Todo Item Component",
+      "category": "ui",
+      "description": "Create individual TodoItem component",
+      "steps": [
+        "Create TodoItem.tsx",
+        "Show checkbox, title, delete button",
+        "Handle click to toggle completion",
+        "Style completed state"
+      ],
+      "passes": false
+    },
+    {
+      "id": 7,
+      "title": "Add Todo Form",
+      "category": "feature",
+      "description": "Create form for adding new todos",
+      "steps": [
+        "Create AddTodo.tsx form",
+        "Handle form submission",
+        "Validate input (non-empty)",
+        "Clear form after submit"
+      ],
+      "passes": false
+    },
+    {
+      "id": 8,
+      "title": "Todo State Management",
+      "category": "business",
+      "description": "Manage todo state with React Context",
+      "steps": [
+        "Create TodoContext",
+        "Implement add, toggle, delete functions",
+        "Provide context to app",
+        "Persist to localStorage"
+      ],
+      "passes": false
+    },
+    {
+      "id": 9,
+      "title": "Header Component",
+      "category": "ui",
+      "description": "Create app header with title and stats",
+      "steps": [
+        "Create Header.tsx",
+        "Show app title",
+        "Display todo count",
+        "Style header"
+      ],
+      "passes": false
+    },
+    {
+      "id": 10,
+      "title": "Styling",
+      "category": "ui",
+      "description": "Style the application",
+      "steps": [
+        "Set up global styles",
+        "Style todo list layout",
+        "Style form components",
+        "Add responsive design"
+      ],
+      "passes": false
+    },
+    {
+      "id": 11,
+      "title": "Testing",
+      "category": "testing",
+      "description": "Write tests for core functionality",
+      "steps": [
+        "Install testing library",
+        "Write useLocalStorage tests",
+        "Write TodoItem tests",
+        "Run all tests"
+      ],
+      "passes": false
+    },
+    {
+      "id": 12,
+      "title": "Build Verification",
+      "category": "infrastructure",
+      "description": "Verify production build works",
+      "steps": [
+        "Run npm run build",
+        "Verify build output",
+        "Check for errors",
+        "Verify bundle size"
+      ],
+      "passes": false
+    },
+    {
+      "id": 13,
+      "title": "Documentation",
+      "category": "infrastructure",
+      "description": "Create README documentation",
+      "steps": [
+        "Write README.md",
+        "Add screenshots",
+        "Document available scripts",
+        "Add contributing guide"
+      ],
+      "passes": false
+    },
+    {
+      "id": 14,
+      "title": "GitHub Upload",
+      "category": "optimization",
+      "description": "Upload project to GitHub",
+      "steps": [
+        "Initialize git repository",
+        "Create GitHub repository",
+        "Push code to GitHub",
+        "Verify repository"
+      ],
+      "passes": false
+    }
+  ]
+}

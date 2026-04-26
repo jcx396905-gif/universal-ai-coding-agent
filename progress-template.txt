@@ -1,0 +1,63 @@
+# Progress Log - Universal AI Coding Agent
+# ============================================================
+# This file tracks the progress of all tasks.
+# Each agent session should append their work below.
+# ============================================================
+
+## Format
+
+```
+## [Date] - Task: [task title]
+
+### What was done:
+- [specific changes made]
+
+### Testing:
+- lint: [passed/failed/skipped]
+- test: [passed/failed/skipped]
+- build: [passed/failed/skipped]
+
+### Notes:
+- [any relevant notes, decisions, or gotchas]
+```
+
+## Task Categories
+
+| Category | Description |
+|----------|-------------|
+| infrastructure | Project setup, configs, dependencies |
+| feature | Core functionality implementation |
+| business | Business logic, data handling |
+| ui | User interface development |
+| testing | Test coverage, QA |
+| optimization | Performance, refactoring |
+
+## Blocking Issue Format
+
+```
+🚫 任务阻塞 - 需要人工介入
+
+**当前任务**: [task name]
+**task.json ID**: [ID]
+
+**已完成的工作**:
+- [specific code written]
+
+**阻塞原因**:
+- [specific reason why cannot continue]
+
+**需要人工帮助**:
+1. [specific step 1]
+2. [specific step 2]
+
+**解除阻塞后，继续执行**:
+- Run `./init.sh` to reinitialize
+- Agent will auto-resume from this task
+```
+
+---
+
+## Session Log
+
+<!-- Start of session log - append your sessions below -->
+

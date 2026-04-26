@@ -1,0 +1,27 @@
+{
+  "name": "universal-agent-cli",
+  "version": "1.0.0",
+  "description": "Universal AI Coding Agent CLI - Transform ideas into complete projects",
+  "main": "index.js",
+  "bin": {
+    "universal-agent": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "coding",
+    "automation",
+    "project-generator"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

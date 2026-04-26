@@ -1,0 +1,130 @@
+{
+  "project": "python-todo-cli",
+  "description": "A Python CLI tool for managing a todo list using SQLite",
+  "environment": {
+    "sdk": "python",
+    "install_cmd": "pip install -r requirements.txt",
+    "lint_cmd": "ruff check .",
+    "test_cmd": "pytest",
+    "build_cmd": "python -m py_compile **/*.py"
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Project Setup",
+      "category": "infrastructure",
+      "description": "Initialize Python project with basic structure",
+      "steps": [
+        "Create project directory structure",
+        "Create requirements.txt with dependencies",
+        "Initialize git repository",
+        "Create .gitignore"
+      ],
+      "passes": false
+    },
+    {
+      "id": 2,
+      "title": "Database Setup",
+      "category": "infrastructure",
+      "description": "Set up SQLite database and models",
+      "steps": [
+        "Create database.py with SQLite connection",
+        "Define Todo model",
+        "Create tables on startup",
+        "Test database connection"
+      ],
+      "passes": false
+    },
+    {
+      "id": 3,
+      "title": "CLI Framework",
+      "category": "feature",
+      "description": "Set up Click CLI framework",
+      "steps": [
+        "Install Click",
+        "Create main.py with CLI entry point",
+        "Create add, list, done, delete commands",
+        "Test CLI commands"
+      ],
+      "passes": false
+    },
+    {
+      "id": 4,
+      "title": "Todo Operations",
+      "category": "feature",
+      "description": "Implement CRUD operations for todos",
+      "steps": [
+        "Implement add_todo function",
+        "Implement list_todos function",
+        "Implement mark_done function",
+        "Implement delete_todo function"
+      ],
+      "passes": false
+    },
+    {
+      "id": 5,
+      "title": "Data Persistence",
+      "category": "business",
+      "description": "Ensure todos persist in SQLite",
+      "steps": [
+        "Verify data persists after restart",
+        "Handle database errors gracefully",
+        "Add data validation",
+        "Write persistence tests"
+      ],
+      "passes": false
+    },
+    {
+      "id": 6,
+      "title": "Output Formatting",
+      "category": "ui",
+      "description": "Format CLI output nicely",
+      "steps": [
+        "Add colored output for status",
+        "Format todo list with alignment",
+        "Add timestamps to output",
+        "Handle empty list case"
+      ],
+      "passes": false
+    },
+    {
+      "id": 7,
+      "title": "Testing",
+      "category": "testing",
+      "description": "Write tests for core functionality",
+      "steps": [
+        "Write test_database.py",
+        "Write test_todos.py",
+        "Run pytest",
+        "Fix any failing tests"
+      ],
+      "passes": false
+    },
+    {
+      "id": 8,
+      "title": "Documentation",
+      "category": "infrastructure",
+      "description": "Create README and help text",
+      "steps": [
+        "Write README.md",
+        "Add --help documentation",
+        "Create CHANGELOG.md",
+        "Add usage examples"
+      ],
+      "passes": false
+    },
+    {
+      "id": 9,
+      "title": "GitHub Upload",
+      "category": "optimization",
+      "description": "Upload project to GitHub",
+      "steps": [
+        "Create GitHub repository",
+        "Push code to GitHub",
+        "Add repo description",
+        "Verify repository"
+      ],
+      "passes": false
+    }
+  ]
+}
