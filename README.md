@@ -1,5 +1,7 @@
 # Universal AI Coding Agent
 
+[English](./README.md) | [中文](./README_zh.md)
+
 > Transform any idea into a complete, production-ready project with AI.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
